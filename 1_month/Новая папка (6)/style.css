@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    color: red;
+    margin-top: 50px;
+}
+
+.container{
+    margin-left: 55px;
+}
+
+.card{ 
+    display: inline-block; 
+    width: 31%; 
+    background-color: gold; 
+    padding: 20px; 
+    margin-bottom: 50px; 
+    } 
+    .card-img{ 
+        width: 200%; 
+        height: 400px; 
+        object-fit: cover; 
+    }
+
+img{
+    background-color: black;
+}

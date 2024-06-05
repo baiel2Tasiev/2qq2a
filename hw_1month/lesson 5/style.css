@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 30px 0;
+}
+
+.header-menu {
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+}
+
+.header-link {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    color: black;
+    text-decoration: none;
+}
+
+.header-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+}
+
+.intro-title {
+    font-family: Roboto;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 64px;
+}
+
+.intro-text {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    margin-top: 30px;
+}
+
+.intro-btn {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    color: white;
+    background-color: black;
+    padding: 10px 27px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 30px;
+}
+
+.intro-btn:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.intro-img {
+    width: 100%;
+}
+
+.projects-title {
+    font-family: Roboto;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 64px;
+}
+
+.projects-line {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin: 40px 0;
+}
+
+.projects-text-title {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 90px;
+}
+
+.projects-text {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    margin-top: 30px;
+    width: 50%;
+}
+
+.projects-link {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    margin-top: 40px;
+    display: block;
+    width: 127px;
+}
+
+.projects-text-title-right {
+    text-align: right;
+}
+
+.projects-text-right {
+    text-align: right;
+    margin-left: 50%;
+}
+
+.projects-link-right {
+    margin-left: calc(100% - 127px);
+}
+
+.projects-more {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    display: block;
+    margin-top: 40px;
+}
+
+.projects-img {
+    width: 100%;
+}
+
+
+.contact-title {
+    font-family: Roboto;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 64px;
+}
+
+.contact-form {
+    margin-top: 100px;
+}
+
+.contact-form-input::placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.contact-form-input {
+    padding: 20px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.contact-form-button {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    color: white;
+    background-color: black;
+    padding: 10px 27px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 60px;
+}
+
+.contact-form-button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.contact-img {
+    width: 100%;
+}
+
+.footer {
+    background: rgb(16, 16, 16);
+    padding: 60px 0;
+}
+
+.footer-link {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    color: #FFFCFC;
+    text-decoration: none;
+}
+
+.footer-row{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media  screen and ( max-width: 1400px) {
+    .container{
+        max-width: 1140px;
+    }
+    
+}
+
+@media  screen and ( max-width: 1200px) {
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media  screen and ( max-width: 992px) {
+    .container{
+        max-width: 720px;
+    }
+    .intro-title{
+        font-size: 48px;
+    }
+    .projects-text-title{
+        margin-top: 45px;
+    }
+}
+
+

@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.block{
+    width: 190px;
+    height: 190px;
+    margin: 5px;
+    background-color: rgb(0, 187, 171);
+    justify-content: space-evenly;
+    
+}
+
+.block2{
+    background-color: blueviolet;
+    order: -1;
+    /* flex-grow: 1; */
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    /* height: 80vh; */
+    border: 10px solid blueviolet;
+    align-items: center;
+    /* flex-direction: row; 
+    flex-wrap: wrap;  */
+    flex-flow: row wrap;
+    /* flex-grow: 1; */
+}
+
+
+

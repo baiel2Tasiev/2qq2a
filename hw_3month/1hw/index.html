@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РЕГИСТРАЦИЯ</title>
+
+    <style> 
+        .container {
+            margin-top: 150px;
+            margin-left: 500px;
+            border: 2px solid black;
+            width: 400px;
+            border-radius: 40px;
+            padding: 60px;
+        }
+
+        input{
+            border-radius: 40px ;
+            text-align: center;
+        }
+
+        button{
+            border-radius: 40px;
+        }
+        .error {
+            color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" id="login" placeholder="Введите ваш логин :"> ----- Введите ваш логин <br>
+        <hr>
+        <br>
+        <input type="password" id="password" placeholder="Введите ваш пароль :"> ----- Введите ваш пароль <br>
+        <hr>
+        <br>
+        <input type="email" id="email" placeholder=" Введите ваш email :"> ----- Введите ваш email <br>
+        <span id="emailError" class="error"></span>
+        <hr>
+        <br>
+        <button id="submitBtn"> ПОДТВЕРДИТЬ </button>
+    </div>
+
+
+    <script>
+        function isValidEmail(email) {
+            const pattern = /^[^@]+@[^@]+\.[^@]+$/;
+            return pattern.test(email);
+
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function (event) {
+            const emailInput = document.getElementById("email")
+            const emailError = document.getElementById("emailError")
+            const email = emailInput.value
+
+            if (!isValidEmail(email)) {
+                emailError.textContent = "Не правильный формат почты";
+                event.preventDefault();
+            } else {
+                emailError.textContent = "";
+                alert("Вы успешно зарегстрировались wuuuuui !")
+                
+                
+            }
+
+        });
+
+    </script>
+   
+</body>
+
+</html>

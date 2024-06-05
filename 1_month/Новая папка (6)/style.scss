@@ -1,0 +1,22 @@
+*{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+h1{
+    text-align: center;
+    color: red;
+    margin-top: 50px;
+}
+
+.container{
+    display: flex;
+    display: inline-block; 
+    width: 31%; 
+    background-color: gold; 
+    padding: 20px; 
+    margin-bottom: 50px; 
+}
+    &_mouse{
+        
+    }

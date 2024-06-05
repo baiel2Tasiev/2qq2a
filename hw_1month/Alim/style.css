@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    color: blue;
+}
+.spin{
+border: 4px solid rgb(242, 199, 199);
+border-radius: 50%;
+border-top: 4px solid #ed8787
+border-left: 4px solid hsl(0, 91%, 71%);
+border-right: 4px solid #ff0000;
+width: 40px;
+height: 40px;
+
+margin: 50px auto;
+}
+.@keyframesspin{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360   deg)
+    }
+}
+
+
+
+
