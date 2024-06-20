@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #searchForm {
+            margin-bottom: 20px;
+        }
+        #movieInfo {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #movieInfo img {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+        #movieDetails {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Search</h1>
+    <form id="searchForm">
+        <input type="text" id="movieName" placeholder="Enter movie name" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="movieInfo">
+        <div id="movieDetails">
+            <img id="moviePoster" src="" alt="Movie Poster">
+            <div>
+                <h2 id="movieTitle"></h2>
+                <p><strong>Year:</strong> <span id="movieYear"></span></p>
+                <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+                <p><strong>Director:</strong> <span id="movieDirector"></span></p>
+                <p><strong>Actors:</strong> <span id="movieActors"></span></p>
+                <p><strong>Plot:</strong> <span id="moviePlot"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const movieName = document.getElementById('movieName').value;
+            const OMDB_API_KEY = 'your_omdb_api_key_here'; // Замените 'your_omdb_api_key_here' на ваш реальный ключ API OMDB
+            fetch(`http://www.omdbapi.com/?t=${movieName}&apikey=${OMDB_API_KEY}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.Title) {
+                    document.getElementById('movieTitle').innerText = data.Title;
+                    document.getElementById('movieYear').innerText = data.Year;
+                    document.getElementById('movieGenre').innerText = data.Genre;
+                    document.getElementById('movieDirector').innerText = data.Director;
+                    document.getElementById('movieActors').innerText = data.Actors;
+                    document.getElementById('moviePlot').innerText = data.Plot;
+                    document.getElementById('moviePoster').src = data.Poster !== 'N/A' ? data.Poster : 'https://via.placeholder.com/200';
+                    document.getElementById('movieInfo').style.display = 'block';
+                } else {
+                    alert('Movie not found!');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error fetching movie data!');
+            });
+        });
+    </script>
+</body>
+</html>
